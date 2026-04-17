@@ -1,3 +1,5 @@
-export function Body() {
+const Body = () => {
   return <p>Body</p>;
-}
+};
+
+export default Body

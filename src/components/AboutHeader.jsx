@@ -1,6 +1,5 @@
 import { NavLink } from "react-router-dom";
-
-const Header = () => {
+const AboutHeader = () => {
   return (
     <header>
       <img src="./src/assets/kasa_logo.webp" alt="Logo Kasa" />
@@ -8,8 +7,11 @@ const Header = () => {
         <NavLink to="/">Accueil</NavLink>
         <NavLink to="/About">A Propos</NavLink>
       </nav>
-      <img src="./src/assets/paysage_marin.webp" alt="Paysage marin" />
+      <img
+        src="./src/assets/paysage_montagnard.webp"
+        alt="Paysage Montagnard"
+      />
     </header>
   );
 };
-export default Header;
+export default AboutHeader;
