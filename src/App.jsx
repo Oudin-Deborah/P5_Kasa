@@ -1,7 +1,7 @@
 import { useState } from "react";
 import Index from "./pages/Index";
 import About from "./pages/About";
-import Error from "./pages/Error404";
+import ErrorPage from "./pages/Error404";
 import Articles from "./pages/Articles";
 import {
   createBrowserRouter,
@@ -9,6 +9,7 @@ import {
   Link,
   NavLink,
 } from "react-router-dom";
+
 
 const Router = createBrowserRouter([
   {
@@ -24,6 +25,22 @@ const Router = createBrowserRouter([
     element: (
       <div>
         <About />
+      </div>
+    ),
+  },
+  {
+    path: "/Articles:id",
+    element: (
+      <div>
+        <Articles:id />
+      </div>
+    ),
+  },
+  {
+    path: "*",
+    element: (
+      <div>
+        <ErrorPage />
       </div>
     ),
   },

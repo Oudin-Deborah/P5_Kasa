@@ -1,14 +1,20 @@
 import { NavLink } from "react-router-dom";
+import Logo from "../assets/kasa_logo.webp";
+import PaysageMarin from "../assets/paysage_marin.webp";
 
 const Header = () => {
   return (
     <header>
-      <img src="./src/assets/kasa_logo.webp" alt="Logo Kasa" />
+      <img src={Logo} alt="Logo Kasa" />
       <nav>
-        <NavLink to="/">Accueil</NavLink>
-        <NavLink to="/About">A Propos</NavLink>
+        <NavLink to="/" className="nav__link">
+          Accueil
+        </NavLink>
+        <NavLink to="/About" className="nav__link">
+          A Propos
+        </NavLink>
       </nav>
-      <img src="./src/assets/paysage_marin.webp" alt="Paysage marin" />
+      <img src={PaysageMarin} alt="Paysage marin" />
     </header>
   );
 };
