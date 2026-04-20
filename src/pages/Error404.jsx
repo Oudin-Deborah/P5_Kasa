@@ -6,7 +6,7 @@ const ErrorPage = () => {
   return (
     <div>
       <Header />
-      <main>
+      <main className="page__error">
         <h1 className="title__error">404</h1>
         <p className="p__error">
           Oups! La page que vous demandez n'existe pas.
@@ -17,9 +17,7 @@ const ErrorPage = () => {
           </NavLink>
         </nav>
       </main>
-      <footer>
-        <Footer />
-      </footer>
+      <Footer />
     </div>
   );
 };

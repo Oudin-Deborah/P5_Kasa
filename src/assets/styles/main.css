@@ -1,17 +1,49 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap");
 /***Global***/
 html,
+h1,
 footer {
   font-family: Montserrat, sans-serif;
   color: #FF6060;
   margin: 0;
   padding: 0;
-  border: 0;
+  /***Header***/
 }
 
-.footer__Img {
+.header__img-title {
   display: flex;
+  justify-content: center;
 }
+
+.header__img {
+  position: relative;
+  width: 1240px;
+  height: 223px;
+  object-fit: cover;
+  border-radius: 25px;
+  border: solid black 1px;
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.2509803922);
+}
+
+.header__h2 {
+  color: white;
+  position: absolute;
+  width: 733px;
+  height: 68px;
+  font-weight: 700;
+  font-size: 48px;
+  text-shadow: 1px 1px 2px black;
+}
+
+p, nav {
+  font-weight: 500;
+}
+
+footer {
+  display: flex;
+  justify-content: center;
+}
+
 .footer__Mobile {
   display: none;
 }
@@ -24,11 +56,17 @@ nav {
 }
 
 .page__error {
-  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.p__error {
+  font-size: 3rem;
 }
 
 .title__error {
-  font-size: 7rem;
+  font-size: 37rem;
 }
 
 .main__nav {

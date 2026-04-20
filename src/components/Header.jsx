@@ -1,6 +1,5 @@
 import { NavLink } from "react-router-dom";
 import Logo from "../assets/kasa_logo.webp";
-import PaysageMarin from "../assets/paysage_marin.webp";
 
 const Header = () => {
   return (
@@ -14,7 +13,6 @@ const Header = () => {
           A Propos
         </NavLink>
       </nav>
-      
     </header>
   );
 };

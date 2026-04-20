@@ -2,4 +2,4 @@ const Body = () => {
   return <p>Body</p>;
 };
 
-export default Body
+export default Body;
