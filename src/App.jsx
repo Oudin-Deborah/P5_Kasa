@@ -28,14 +28,7 @@ const Router = createBrowserRouter([
       </div>
     ),
   },
-  {
-    path: "/Articles:id",
-    element: (
-      <div>
-        <Articles:id />
-      </div>
-    ),
-  },
+
   {
     path: "*",
     element: (

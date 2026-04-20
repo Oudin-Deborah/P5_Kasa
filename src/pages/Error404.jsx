@@ -5,20 +5,21 @@ import Footer from "../components/Footer";
 const ErrorPage = () => {
   return (
     <div>
-      <header>
-        <img src="./src/assets/kasa_logo.webp" alt="Logo Kasa" />
-        <nav>
-          <NavLink to="/">Accueil</NavLink>
-          <NavLink to="/About">A Propos</NavLink>
-        </nav>
-      </header>
+      <Header />
       <main>
         <h1 className="title__error">404</h1>
+        <p className="p__error">
+          Oups! La page que vous demandez n'existe pas.
+        </p>
         <nav>
-          <NavLink to="/">Retourner sur la page d'accueil</NavLink>
+          <NavLink to="/" className="main__nav">
+            Retourner sur la page d'accueil
+          </NavLink>
         </nav>
       </main>
-      <Footer />
+      <footer>
+        <Footer />
+      </footer>
     </div>
   );
 };

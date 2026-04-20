@@ -14,7 +14,7 @@ const Header = () => {
           A Propos
         </NavLink>
       </nav>
-      <img src={PaysageMarin} alt="Paysage marin" />
+      
     </header>
   );
 };

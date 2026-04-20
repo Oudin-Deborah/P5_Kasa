@@ -1,7 +1,19 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap");
-html {
+/***Global***/
+html,
+footer {
   font-family: Montserrat, sans-serif;
   color: #FF6060;
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+.footer__Img {
+  display: flex;
+}
+.footer__Mobile {
+  display: none;
 }
 
 nav {
@@ -11,7 +23,14 @@ nav {
   height: auto;
 }
 
+.page__error {
+  text-align: center;
+}
+
 .title__error {
   font-size: 7rem;
-  text-align: center;
+}
+
+.main__nav {
+  color: black;
 }/*# sourceMappingURL=main.css.map */
