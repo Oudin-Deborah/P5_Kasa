@@ -1,10 +1,12 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap");
 /***Global***/
 html,
+body,
 h1,
 footer {
   font-family: Montserrat, sans-serif;
   color: #FF6060;
+  display: block;
   margin: 0;
   padding: 0;
   /***Header***/

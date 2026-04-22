@@ -1,5 +1,11 @@
+import Housing from "../pages/housing";
+
 const Body = () => {
-  return <p>Body</p>;
+  return (
+    <main>
+      <p>Body</p>
+    </main>
+  );
 };
 
 export default Body;

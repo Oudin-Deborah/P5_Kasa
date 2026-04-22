@@ -1,15 +1,15 @@
 import { useState } from "react";
+import { useParams } from "react-router-dom";
 import Index from "./pages/Index";
 import About from "./pages/About";
 import ErrorPage from "./pages/Error404";
-import Articles from "./pages/Articles";
+import Housing from "./pages/housing";
 import {
   createBrowserRouter,
   RouterProvider,
   Link,
   NavLink,
 } from "react-router-dom";
-
 
 const Router = createBrowserRouter([
   {
@@ -25,6 +25,14 @@ const Router = createBrowserRouter([
     element: (
       <div>
         <About />
+      </div>
+    ),
+  },
+  {
+    path: "/housing/:id",
+    element: (
+      <div>
+        <Housing />
       </div>
     ),
   },
