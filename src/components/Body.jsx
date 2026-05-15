@@ -1,9 +1,11 @@
-import Housing from "../pages/housing";
+//Body de la page d'accueil
 
 const Body = () => {
   return (
     <main>
-      <p>Body</p>
+      <article>
+        <p>Body</p>
+      </article>
     </main>
   );
 };

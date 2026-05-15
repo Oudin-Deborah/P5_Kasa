@@ -1,5 +1,5 @@
 import Header from "../components/Header";
-import Body from "../components/Body";
+import BodyAbout from "../components/BodyAbout";
 import Footer from "../components/Footer";
 import PaysageMontagnard from "../assets/paysage_montagnard.webp";
 const About = () => {
@@ -13,7 +13,7 @@ const About = () => {
           className="header__img"
         />
       </div>
-      <Body />
+      <BodyAbout/>
       <Footer />
     </div>
   );

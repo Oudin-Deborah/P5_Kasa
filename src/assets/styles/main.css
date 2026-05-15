@@ -57,6 +57,15 @@ nav {
   height: auto;
 }
 
+.bodyAbout__options, .fa-solid .fa-angle-down {
+  list-style: none;
+  background-color: #FF6060;
+  color: white;
+  font-size: 24px;
+  font-style: bold;
+  font-weight: 700;
+}
+
 .page__error {
   display: flex;
   flex-direction: column;
@@ -73,4 +82,8 @@ nav {
 
 .main__nav {
   color: black;
+}
+
+.footer__img {
+  display: none;
 }/*# sourceMappingURL=main.css.map */
