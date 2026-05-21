@@ -1,10 +1,10 @@
 import Header from "../components/Header";
-import Body from "../components/Body";
 import Footer from "../components/Footer";
-
+import { Articles } from "../components/Fetch";
+import Body from "../components/BodyIndex";
 import PaysageMarin from "../assets/paysage_marin.webp";
 
-const Index = ({ data }) => {
+const Index = () => {
   return (
     <div>
       <Header />
@@ -12,7 +12,9 @@ const Index = ({ data }) => {
         <img src={PaysageMarin} alt="Paysage marin" className="header__img" />
         <h2 className="header__h2">Chez vous, partout et ailleurs</h2>
       </div>
-      <main></main>
+      <main>
+        <Body />
+      </main>
       <Footer />
     </div>
   );

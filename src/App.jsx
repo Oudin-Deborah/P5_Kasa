@@ -1,7 +1,7 @@
 import Index from "./pages/Index";
 import About from "./pages/About";
 import ErrorPage from "./pages/Error404";
-import HousingPage from "./pages/housing";
+import Housing from "./pages/housing";
 import {
   createBrowserRouter,
   RouterProvider,
@@ -20,7 +20,7 @@ const Router = createBrowserRouter([
   },
   {
     path: "/housing/:id",
-    element: <HousingPage />,
+    element: <Housing />,
   },
 
   {
