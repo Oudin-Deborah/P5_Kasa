@@ -12,7 +12,7 @@ const Index = () => {
         <img src={PaysageMarin} alt="Paysage marin" className="header__img" />
         <h2 className="header__h2">Chez vous, partout et ailleurs</h2>
       </div>
-      <main>
+      <main className="Index__Main">
         <Body />
       </main>
       <Footer />

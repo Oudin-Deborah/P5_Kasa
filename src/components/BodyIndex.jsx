@@ -25,9 +25,11 @@ export default function Body() {
 
   return (
     <main className="Body__Main">
-      {articles.map((item) => (
-        <Cards key={item.id} article={item} />
-      ))}
+      <div className="Cards__Grid">
+        {articles.map((item) => (
+          <Cards key={item.id} article={item} />
+        ))}
+      </div>
     </main>
   );
 }
