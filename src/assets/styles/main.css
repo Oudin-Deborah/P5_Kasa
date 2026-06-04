@@ -13,6 +13,7 @@ footer {
 .header__img-title {
   display: flex;
   justify-content: center;
+  align-items: center;
 }
 
 .header__img {
@@ -23,6 +24,7 @@ footer {
   border-radius: 25px;
   border: solid black 1px;
   box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.2509803922);
+  filter: brightness(0.4);
 }
 
 .header__h2 {
@@ -69,18 +71,46 @@ nav {
   margin: 40px;
 }
 
+.Body__Cards {
+  position: relative;
+}
+
 .Cards__Grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  margin: 40px;
+  padding: 50px 50px 50px 50px;
+  gap: 50px;
+}
+
+.Cards__Gradiant {
+  position: relative;
+  width: 340px;
+  height: 340px;
+}
+
+.Cards__Gradiant::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: 10px;
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, rgba(10, 10, 10, 0) 42%, rgba(4, 4, 4, 0.205) 99.99%, rgba(0, 0, 0, 0.5) 100%);
 }
 
 .Cards__Img {
+  display: block;
   width: 340px;
   height: 340px;
   border-radius: 10px;
   object-fit: cover;
-  background: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, rgba(10, 10, 10, 0) 42%, rgba(4, 4, 4, 0.205) 99.99%, rgba(0, 0, 0, 0.5) 100%);
+}
+
+.Cards__Title {
+  position: absolute;
+  top: 268px;
+  left: 20px;
+  color: white;
+  font-size: 18px;
+  font-style: bold;
 }
 
 .bodyAbout__options, .fa-solid .fa-angle-down {
@@ -90,6 +120,15 @@ nav {
   font-size: 24px;
   font-style: bold;
   font-weight: 700;
+}
+
+.Housing__Img {
+  position: relative;
+  display: block;
+}
+
+.Arrow {
+  display: flex;
 }
 
 .page__error {

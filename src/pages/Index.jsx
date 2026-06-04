@@ -8,8 +8,11 @@ const Index = () => {
   return (
     <div>
       <Header />
+
       <div className="header__img-title">
-        <img src={PaysageMarin} alt="Paysage marin" className="header__img" />
+        <div className="Img__Shadow">
+          <img src={PaysageMarin} alt="Paysage marin" className="header__img" />
+        </div>
         <h2 className="header__h2">Chez vous, partout et ailleurs</h2>
       </div>
       <main className="Index__Main">
