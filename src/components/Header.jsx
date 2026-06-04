@@ -3,9 +3,9 @@ import Logo from "../assets/kasa_logo.webp";
 
 const Header = () => {
   return (
-    <header>
-      <img src={Logo} alt="Logo Kasa" />
-      <nav>
+    <header className="Header">
+      <img src={Logo} alt="Logo Kasa" className="Header__Logo" />
+      <nav className="Header__Nav">
         <NavLink to="/" className="nav__link Link__Index">
           Accueil
         </NavLink>

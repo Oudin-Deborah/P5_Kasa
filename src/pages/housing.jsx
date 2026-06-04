@@ -35,7 +35,7 @@ export default function Housing() {
       <main>
         <Slider pictures={data.pictures} />
         <h2>{data.title}</h2>
-        <p>{data.location}</p>
+        <p className="Housing__Location">{data.location}</p>
         <p>{data.host.name}</p>
 
         {data.tags.map((tag) => (
