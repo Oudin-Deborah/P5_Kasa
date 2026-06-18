@@ -11,7 +11,7 @@ const Index = () => {
 
       <div className="header__img-title">
         <div className="Img__Shadow">
-          <img src={PaysageMarin} alt="Paysage marin" className="header__img" />
+          <img src={PaysageMarin} alt="Paysage marin" className="Index__Header__img" />
         </div>
         <h2 className="header__h2">Chez vous, partout et ailleurs</h2>
       </div>

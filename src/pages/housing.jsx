@@ -5,6 +5,7 @@ import Header from "../components/Header";
 import Footer from "../components/Footer";
 import Slider from "../components/Slider";
 import { Articles } from "../components/Fetch";
+import Collapse from "../components/Collapse";
 
 export default function Housing() {
   const { id } = useParams();
@@ -32,23 +33,32 @@ export default function Housing() {
   return (
     <div>
       <Header />
-      <main>
+      <main className="Housing__Main">
         <Slider pictures={data.pictures} />
         <h2>{data.title}</h2>
         <p className="Housing__Location">{data.location}</p>
         <p>{data.host.name}</p>
-
-        {data.tags.map((tag) => (
-          <button key={tag}>{tag}</button>
-        ))}
+        <div className="buttons">
+          {data.tags.map((tag) => (
+            <button className="Housing__button" key={tag}>
+              {tag}
+            </button>
+          ))}
+        </div>
 
         <p>{data.rating}</p>
-
-        <ul>
-          {data.equipments.map((eq) => (
-            <li key={eq}>{eq}</li>
-          ))}
-        </ul>
+        <div className="collapse__Description__Equipements">
+          <Collapse className="Description" title="Description">
+            <p>{data.description}</p>
+          </Collapse>
+          <Collapse className="Equipements" title="Equipements">
+            <ul>
+              {data.equipments.map((eq, index) => (
+                <li key={index}>{eq}</li>
+              ))}
+            </ul>
+          </Collapse>
+        </div>
       </main>
       <Footer />
     </div>

@@ -10,32 +10,49 @@ footer {
   padding: 0;
 }
 
-.Header {
-  display: flex;
-  box-sizing: border-box;
+html {
+  padding-top: 45px;
 }
 
-.Header__Logo {
-  padding: 30px 0 30px 0;
+.Header, .Header__Nav, .header__img-title, .About__Collapse {
+  display: flex;
+}
+
+.Header {
+  justify-content: center;
+  box-sizing: border-box;
+  height: 68px;
 }
 
 .Header__Nav {
-  display: flex;
   justify-content: space-evenly;
-  width: 309px;
-  height: auto;
   align-items: center;
   padding-left: 931px;
-  padding-top: 17px;
+  gap: 53px;
+}
+
+.nav__link {
+  list-style: none;
 }
 
 .header__img-title {
-  display: flex;
   justify-content: center;
   align-items: center;
+  padding-top: 50px;
 }
 
-.header__img {
+.About__Header__img {
+  position: relative;
+  width: 1240px;
+  height: 223px;
+  object-fit: cover;
+  border-radius: 25px;
+  border: solid black 1px;
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.2509803922);
+  filter: brightness(0.7);
+}
+
+.Index__Header__img {
   position: relative;
   width: 1240px;
   height: 223px;
@@ -125,22 +142,159 @@ footer {
   font-style: bold;
 }
 
-.bodyAbout__options, .fa-solid .fa-angle-down {
-  list-style: none;
+.About__Main {
+  display: flex;
+  gap: 30px;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.collapse__Description__Equipements {
+  display: flex;
+  justify-items: start;
+  justify-content: center;
+  gap: 76px;
+}
+
+.collapse__Description__Equipements .Collapse__h3 {
+  position: relative;
+  display: flex;
+  align-items: center;
+  width: 582px;
+  height: 52px;
+  border-radius: 10px;
   background-color: #FF6060;
   color: white;
   font-size: 24px;
-  font-style: bold;
+}
+
+.collapse__Description__Equipements .fa-solid {
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 32px;
+  height: 32px;
+  color: red;
+}
+
+.collapse__Description__Equipements .Collapse_p {
+  width: 582px;
+  height: auto;
+}
+
+.Collapse__section {
+  display: flex;
+  align-content: center;
+  align-items: center;
+  justify-items: start;
+  width: 1023px;
+  height: auto;
+  flex-direction: column;
+  justify-content: space-evenly;
+  margin: auto;
+}
+
+.Description {
+  display: flex;
+}
+
+.Collapse__section .Collapse__h3 {
+  position: relative;
+  display: flex;
+  align-items: center;
+  width: 1023px;
+  height: 52px;
+  border-radius: 5px;
+  background-color: #FF6060;
+  color: white;
+  font-size: 24px;
+  padding: 10px 20px 10px 15px;
+}
+.Collapse__section .fa-solid {
+  position: absolute;
+  right: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 32px;
+  height: 32px;
+  color: white;
+}
+
+.Collapse_p {
+  margin: 0 0 0 0;
+  padding: 0 0 0 0;
+  color: black;
+}
+
+.buttons {
+  display: flex;
+  margin: 10px 20px 10px 15px;
+}
+
+.Housing__button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 25px;
+  width: auto;
+  border-radius: 10px;
+  background-color: #FF6060;
+  color: white;
+  border: none;
+  font-size: 14px;
   font-weight: 700;
+}
+
+.Housing__Img__Slider {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 53px;
 }
 
 .Housing__Img {
   position: relative;
-  display: block;
+  border-radius: 25px;
+  width: 1240px;
+  height: 415px;
+  object-fit: cover;
 }
 
 .Arrow {
   display: flex;
+  width: 46px;
+  height: 79px;
+  background: none;
+  border: none;
+  align-items: center;
+  color: white;
+  position: absolute;
+}
+
+.fa-angle-left, .fa-angle-right {
+  width: auto;
+  height: 79px;
+}
+
+.fa-angle-right {
+  left: 20px;
+}
+
+.fa-angle-left {
+  right: 20px;
+}
+
+.Pictures__Counter {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  font-size: 18px;
+  width: 24px;
+  height: 32px;
+  color: white;
+  padding-top: 357px;
 }
 
 .Housing__Location {

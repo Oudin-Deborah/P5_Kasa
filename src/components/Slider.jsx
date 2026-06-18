@@ -27,20 +27,21 @@ export default function Slider({ pictures }) {
   };
 
   return (
-    <div>
+    <div className="Housing__Img__Slider">
+      <img
+        src={pictures[index]}
+        alt="Photos des Logements"
+        className="Housing__Img"
+      />
       <button className="Arrow Slider__Previous" onClick={previousClick}>
         <FontAwesomeIcon icon={faAngleLeft} />
       </button>
       <button className="Arrow Slider__Next" onClick={nextClick}>
         <FontAwesomeIcon icon={faAngleRight} />
       </button>
-      <img
-        src={pictures[index]}
-        alt="Photos des Logements"
-        className="Housing__Img"
-      />
-      <div>
-        <PhotoCounter />
+
+      <div className="Pictures__Counter">
+        {index + 1}/{pictures.length}
       </div>
     </div>
   );
