@@ -6,6 +6,7 @@ import Footer from "../components/Footer";
 import Slider from "../components/Slider";
 import { Articles } from "../components/Fetch";
 import Collapse from "../components/Collapse";
+import Rating from "../components/rating";
 
 export default function Housing() {
   const { id } = useParams();
@@ -35,18 +36,28 @@ export default function Housing() {
       <Header />
       <main className="Housing__Main">
         <Slider pictures={data.pictures} />
-        <h2>{data.title}</h2>
-        <p className="Housing__Location">{data.location}</p>
-        <p>{data.host.name}</p>
-        <div className="buttons">
-          {data.tags.map((tag) => (
-            <button className="Housing__button" key={tag}>
-              {tag}
-            </button>
-          ))}
-        </div>
+        <div className="Title__Host">
+          <div className="Housing__info">
+            <h2 className="Housing__Name">{data.title}</h2>
+            <p className="Housing__Location">{data.location}</p>
+          </div>
+          <div className="Host">
+            <p className="Host__Name">{data.host.name}</p>
 
-        <p>{data.rating}</p>
+            <img className="Host__img"></img>
+          </div>
+        </div>{" "}
+        <div className="buttons__rating">
+          <div className="buttons">
+            {data.tags.map((tag) => (
+              <button className="Housing__button" key={tag}>
+                {tag}
+              </button>
+            ))}
+          </div>
+
+          <Rating rating={data.rating} />
+        </div>
         <div className="collapse__Description__Equipements">
           <Collapse className="Description" title="Description">
             <p>{data.description}</p>

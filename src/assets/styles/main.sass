@@ -1,73 +1,19 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap')
 
-//Global
-html,
-body,
-h1,
-footer
+// Global
+html, body, h1, footer
   font-family: Montserrat, sans-serif
   color: #FF6060
   display: block
   margin: 0
   padding: 0
+  width: auto
+  height: auto
 
 html
   padding-top: 45px
 
-
-//Header
-.Header,.Header__Nav,.header__img-title,.About__Collapse
-  display: flex
-
-.Header
-  justify-content: center
-  box-sizing: border-box
-  height: 68px
-  
-.Header__Nav
-  justify-content: space-evenly
-  align-items: center
-  padding-left: 931px
-  gap: 53px
-
-.nav__link
-  list-style: none
-
-.header__img-title
-  justify-content: center
-  align-items: center
-  padding-top: 50px
-
-.About__Header__img
-  position: relative
-  width: 1240px
-  height: 223px
-  object-fit: cover
-  border-radius: 25px
-  border: solid black 1px
-  box-shadow: 0px 4px 4px 0px #00000040
-  filter: brightness(0.7)
-
-.Index__Header__img
-  position: relative
-  width: 1240px
-  height: 223px
-  object-fit: cover
-  border-radius: 25px
-  border: solid black 1px
-  box-shadow: 0px 4px 4px 0px #00000040
-  filter: brightness(0.4)
-
-.header__h2
-    color: white
-    position: absolute
-    width: 733px
-    height: 68px
-    font-weight: 700
-    font-size: 48px
-    text-shadow: 1px 1px 2px black
-
-p,nav
+p, nav
   font-weight: 500
 
 footer
@@ -77,7 +23,57 @@ footer
 .footer__Mobile
   display: none
 
-  //Index
+//Header
+
+.Header, .Header__Nav, .header__img-title, .About__Collapse
+  display: flex
+
+.Header
+  justify-content: center
+  box-sizing: border-box
+  height: 68px
+
+  .Header__Nav
+    justify-content: space-evenly
+    align-items: center
+    padding-left: 931px
+    gap: 53px
+
+.nav__link
+  list-style: none
+
+.header__img-title
+  justify-content: center
+  align-items: center
+  padding-top: 50px
+
+%HeaderImg
+  position: relative
+  width: 1240px
+  height: 223px
+  object-fit: cover
+  border-radius: 25px
+  border: solid black 1px
+  box-shadow: 0px 4px 4px 0px #00000040
+
+.About__Header__img
+  @extend %HeaderImg
+  filter: brightness(0.7)
+
+.Index__Header__img
+  @extend %HeaderImg
+  filter: brightness(0.4)
+
+.header__h2
+  color: white
+  position: absolute
+  width: 733px
+  height: 68px
+  font-weight: 700
+  font-size: 48px
+  text-shadow: 1px 1px 2px black
+
+  //index
 .Index__Main
   display: flex
   justify-content: center
@@ -96,21 +92,21 @@ footer
 .Cards__Grid
   display: grid
   grid-template-columns: repeat(3, 1fr)
-  padding: 50px 50px 50px 50px
+  padding: 50px
   gap: 50px
 
 .Cards__Gradiant
   position: relative
   width: 340px
   height: 340px
-  
-.Cards__Gradiant::after
-  content: ""
-  position: absolute
-  inset: 0
-  border-radius: 10px
-  background: linear-gradient(180deg,rgba(255, 255, 255, 0) 0%,rgba(10, 10, 10, 0) 42%,rgba(4, 4, 4, 0.205) 99.99%,rgba(0, 0, 0, 0.5) 100%)
-  
+
+  &::after
+    content: ""
+    position: absolute
+    inset: 0
+    border-radius: 10px
+    background: linear-gradient(180deg,rgba(255,255,255,0) 0%,rgba(10,10,10,0) 42%,rgba(4,4,4,0.205) 99.99%,rgba(0,0,0,0.5) 100%)
+
 .Cards__Img
   display: block
   width: 340px
@@ -134,42 +130,24 @@ footer
   align-items: center
   flex-direction: column
 
-
-//Housing
-
-
-.collapse__Description__Equipements
+//Collapse
+%CollapseTitle
+  position: relative
   display: flex
-  justify-items: start
-  justify-content: center
-  gap: 76px
+  align-items: center
+  height: 52px
+  background-color: #FF6060
+  color: white
+  font-size: 24px
+  padding: 10px 20px 10px 15px
 
-.collapse__Description__Equipements
-  .Collapse__h3
-    position: relative
-    display: flex
-    align-items: center
-    width: 582px
-    height: 52px
-    border-radius: 10px
-    background-color: #FF6060
-    color: white
-    font-size: 24px
-
-.collapse__Description__Equipements
-    .fa-solid
-      position: absolute
-      right: 10px
-      top: 50%
-      transform: translateY(-50%)
-      width: 32px
-      height: 32px
-      color: red
-
-.collapse__Description__Equipements
-  .Collapse_p
-    width: 582px
-    height: auto
+  .fa-solid
+    position: absolute
+    right: 20px
+    top: 50%
+    transform: translateY(-50%)
+    width: 32px
+    height: 32px
 
 .Collapse__section
   display: flex
@@ -181,40 +159,46 @@ footer
   flex-direction: column
   justify-content: space-evenly
   margin: auto
-.Description
-  display: flex
 
-.Collapse__section
   .Collapse__h3
-    position: relative
-    display: flex
-    align-items: center
+    @extend %CollapseTitle
     width: 1023px
-    height: 52px
-    border-radius: 5px
-    background-color: #FF6060
-    color: white
-    font-size: 24px
-    padding: 10px 20px 10px 15px
-
-  .fa-solid
-    position: absolute
-    right: 20px
-    top: 50%
-    transform: translateY(-50%)
-    width: 32px
-    height: 32px
-    color: white
 
 .Collapse_p
-  margin: 0 0 0 0
-  padding: 0 0 0 0
+  margin: 0
+  padding: 0
   color: black
 
+.collapse__Description__Equipements
+  display: flex
+  justify-items: start
+  justify-content: center
+  gap: 76px
+  
+
+  .Collapse__h3
+    @extend %CollapseTitle
+    width: 582px
+    border-radius: 10px
+
+  .fa-solid
+    right: 10px
+
+  .Collapse_p
+    width: 582px
+
 //Housing
+.buttons__rating
+  display: flex
+  justify-content: space-around
+  align-items: center
+  width: auto
+  height: 25px
 .buttons
   display: flex
   margin: 10px 20px 10px 15px
+  gap: 5px
+
 .Housing__button
   display: flex
   align-items: center
@@ -227,20 +211,42 @@ footer
   border: none
   font-size: 14px
   font-weight: 700
+
 .Housing__Img__Slider
   display: flex
   justify-content: center
   align-items: center
   padding-top: 53px
+  position: relative
 
+.Host
+  display: flex
+  align-items: center
+
+.Host__Name
+  display: flex
+  width: 96px
+  height: 52px
+  justify-content: flex-end
+  align-items: center
+
+.Title__Host
+  display: flex
+  align-items: center
+  justify-content: space-evenly
+
+.Host__img
+  background-color: #c4c4c4
+  width: 64px
+  height: 64px
+  border-radius: 50%
 
 .Housing__Img
-  position: relative
   border-radius: 25px
   width: 1240px
   height: 415px
   object-fit: cover
-    
+
 .Arrow
   display: flex
   width: 46px
@@ -255,11 +261,11 @@ footer
   width: auto
   height: 79px
 
-.fa-angle-right
-  left: 20px
+.Slider__Previous
+  left: 350px
 
-.fa-angle-left
-  right: 20px
+.Slider__Next
+  right: 350px
 
 .Pictures__Counter
   position: absolute
@@ -271,9 +277,24 @@ footer
   color: white
   padding-top: 357px
 
+.Housing__Name
+  font-size: 36px
+  font-weight: 500
+  margin: 0
 
 .Housing__Location
   color: black
+  font-size: 18px
+  width: auto
+  height: 26px
+
+.rating
+  display: flex
+  justify-content: flex-end
+
+.fa-star
+  width: 36px
+  height: 36px
 
 //Error404
 .page__error
@@ -292,7 +313,7 @@ footer
   font-size: 36px
   width: 872px
   margin-bottom: 139px
-  
+
 .main__nav
   color: black
   font-size: 18px
@@ -306,3 +327,4 @@ footer
 
 .footer__Mobile
   display: none
+
