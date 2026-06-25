@@ -1,7 +1,20 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap')
+@use "sass:map"
+@import "https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap"
+
+$breakpoints: (mobile: 768px,desktop: 1024px)
+
+@mixin up($key)
+  $size: map.get($breakpoints, $key)
+  @media (min-width: $size)
+    @content
+
+@mixin down($key)
+  $size: map.get($breakpoints, $key)
+  @media (max-width: $size)
+    @content
 
 // Global
-html, body, h1, footer
+html, body, h1
   font-family: Montserrat, sans-serif
   color: #FF6060
   display: block
@@ -10,37 +23,71 @@ html, body, h1, footer
   width: auto
   height: auto
 
+
 html
   padding-top: 45px
+  @include down(mobile)
+    padding-top: 20px
 
 p, nav
   font-weight: 500
+
 
 footer
   display: flex
   justify-content: center
 
-.footer__Mobile
+.Footer__Img
+  display: block
+  @include down(desktop)
+    display: none
+
+.Footer__Mobile
   display: none
+  @include down(mobile)
+    display: block
 
 //Header
-
 .Header, .Header__Nav, .header__img-title, .About__Collapse
   display: flex
-
+.Header__Logo
+  width: 210px
+  height: auto
+  @include down(mobile)
+    width: 145px
+    height: 46px
+  
 .Header
-  justify-content: center
   box-sizing: border-box
-  height: 68px
+  @include up(desktop)
+    justify-content: center
+    height: 68px
+    width: auto
 
   .Header__Nav
     justify-content: space-evenly
     align-items: center
-    padding-left: 931px
-    gap: 53px
+
+    @include up(desktop)
+      padding-left: 870px
+      gap: 53px
+    @include down(mobile)
+      width: 335px
+      height: auto
+      justify-content: center
+      gap: 26px
+
+
 
 .nav__link
   list-style: none
+  color: black
+  text-decoration: none
+  &:hover
+    text-decoration: underline
+  &:active
+    color: black
+    text-decoration: underline
 
 .header__img-title
   justify-content: center
@@ -55,6 +102,10 @@ footer
   border-radius: 25px
   border: solid black 1px
   box-shadow: 0px 4px 4px 0px #00000040
+  @include down(mobile)
+    width: 335px
+    height: 111px
+    
 
 .About__Header__img
   @extend %HeaderImg
@@ -72,6 +123,12 @@ footer
   font-weight: 700
   font-size: 48px
   text-shadow: 1px 1px 2px black
+  @include down(mobile)
+    width: 225px
+    height: 48px
+    font-size: 24px
+    font-style: bold
+    left: 36px
 
   //index
 .Index__Main
@@ -94,6 +151,8 @@ footer
   grid-template-columns: repeat(3, 1fr)
   padding: 50px
   gap: 50px
+  @include down(mobile)
+    grid-template-columns: repeat(1, 1fr)
 
 .Cards__Gradiant
   position: relative
@@ -125,10 +184,10 @@ footer
 //About
 .About__Main
   display: flex
-  gap: 30px
   justify-content: center
   align-items: center
   flex-direction: column
+
 
 //Collapse
 %CollapseTitle
@@ -139,7 +198,11 @@ footer
   background-color: #FF6060
   color: white
   font-size: 24px
+  border-radius: 5px
   padding: 10px 20px 10px 15px
+  @include down(mobile)
+    width: 335px
+    height: 30px
 
   .fa-solid
     position: absolute
@@ -159,10 +222,18 @@ footer
   flex-direction: column
   justify-content: space-evenly
   margin: auto
+  @include down(mobile)
+    width: 335px
+    height:auto
+
 
   .Collapse__h3
     @extend %CollapseTitle
     width: 1023px
+    @include down(mobile)
+      width: 335px
+      height:30px
+
 
 .Collapse_p
   margin: 0
@@ -194,9 +265,9 @@ footer
   align-items: center
   width: auto
   height: 25px
+  gap: 600px
 .buttons
   display: flex
-  margin: 10px 20px 10px 15px
   gap: 5px
 
 .Housing__button
@@ -225,7 +296,7 @@ footer
 
 .Host__Name
   display: flex
-  width: 96px
+  width: 70px
   height: 52px
   justify-content: flex-end
   align-items: center
@@ -233,7 +304,8 @@ footer
 .Title__Host
   display: flex
   align-items: center
-  justify-content: space-evenly
+  justify-content: space-between
+  margin: 0 100px 0 100px
 
 .Host__img
   background-color: #c4c4c4
@@ -262,10 +334,10 @@ footer
   height: 79px
 
 .Slider__Previous
-  left: 350px
+  left: 120px
 
 .Slider__Next
-  right: 350px
+  right: 120px
 
 .Pictures__Counter
   position: absolute
@@ -280,7 +352,6 @@ footer
 .Housing__Name
   font-size: 36px
   font-weight: 500
-  margin: 0
 
 .Housing__Location
   color: black
@@ -320,11 +391,3 @@ footer
   width: 284px
   height: 26px
   margin-bottom: 139px
-
-.footer__Img
-  width: 1440px
-  height: 209px
-
-.footer__Mobile
-  display: none
-
