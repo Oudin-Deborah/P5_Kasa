@@ -67,15 +67,15 @@ footer
   .Header__Nav
     justify-content: space-evenly
     align-items: center
-
     @include up(desktop)
-      padding-left: 870px
-      gap: 53px
+      width: 309px
+      height: auto
+      padding-left: 60%
     @include down(mobile)
       width: 335px
       height: auto
       justify-content: center
-      gap: 26px
+      gap: 10%
 
 
 
@@ -83,11 +83,11 @@ footer
   list-style: none
   color: black
   text-decoration: none
-  &:hover
-    text-decoration: underline
-  &:active
-    color: black
-    text-decoration: underline
+  @include up(desktop)
+    &:hover
+     text-decoration: underline
+  @include down(mobile)
+    text-decoration: none
 
 .header__img-title
   justify-content: center
@@ -224,7 +224,7 @@ footer
   margin: auto
   @include down(mobile)
     width: 335px
-    height:auto
+    height: auto
 
 
   .Collapse__h3
@@ -235,9 +235,10 @@ footer
       height:30px
 
 
-.Collapse_p
+.Collapse__p
+  width: 582px
   margin: 0
-  padding: 0
+  padding: 0 0 0 20px 
   color: black
 
 .collapse__Description__Equipements
@@ -245,18 +246,24 @@ footer
   justify-items: start
   justify-content: center
   gap: 76px
+  @include down(mobile)
+    width: 335px
+    height: auto
+    flex-direction: column
+    gap: 2%
+    padding-left: 2%
   
 
   .Collapse__h3
     @extend %CollapseTitle
     width: 582px
     border-radius: 10px
+    @include down(mobile)
+      width: 335px
+      height: 30px
 
   .fa-solid
     right: 10px
-
-  .Collapse_p
-    width: 582px
 
 //Housing
 .buttons__rating
@@ -266,9 +273,20 @@ footer
   width: auto
   height: 25px
   gap: 600px
+  @include down(mobile)
+    gap:5px
+    flex-direction: column
+    align-items: flex-start
+
 .buttons
   display: flex
   gap: 5px
+
+
+.Housing__info
+  @include down(mobile)
+    width: 335px
+    height: auto
 
 .Housing__button
   display: flex
@@ -282,6 +300,11 @@ footer
   border: none
   font-size: 14px
   font-weight: 700
+  @include down(mobile)
+    width: auto
+    height: 18px
+    flex-wrap: nowrap
+    border-radius: 5px
 
 .Housing__Img__Slider
   display: flex
@@ -306,6 +329,8 @@ footer
   align-items: center
   justify-content: space-between
   margin: 0 100px 0 100px
+  @include down(mobile)
+    margin: 0
 
 .Host__img
   background-color: #c4c4c4
@@ -321,23 +346,26 @@ footer
 
 .Arrow
   display: flex
-  width: 46px
-  height: 79px
   background: none
   border: none
   align-items: center
   color: white
   position: absolute
+  top: 50%
+
 
 .fa-angle-left, .fa-angle-right
-  width: auto
+  width: 46px
   height: 79px
+  @include down(mobile)
+    width: 12px
+    height: 19px
 
 .Slider__Previous
-  left: 120px
+  left: 8%
 
 .Slider__Next
-  right: 120px
+  right: 8%
 
 .Pictures__Counter
   position: absolute
@@ -352,6 +380,11 @@ footer
 .Housing__Name
   font-size: 36px
   font-weight: 500
+  @include down(mobile)
+    font-size: 18px
+    width: 335px
+    height: auto
+
 
 .Housing__Location
   color: black
@@ -362,11 +395,21 @@ footer
 .rating
   display: flex
   justify-content: flex-end
+  @include down(mobile)
+    width: 98px
+    height: 18px
 
-.fa-star
+
+
+.Star__Full, .Star__Empty
   width: 36px
   height: 36px
-
+  @include down(mobile)
+    width: auto 
+    height: 18px
+    
+.Star__Empty
+  color: #E3E3E3
 //Error404
 .page__error
   display: flex

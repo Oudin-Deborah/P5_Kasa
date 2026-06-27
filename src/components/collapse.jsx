@@ -15,7 +15,7 @@ export default function Collapse({ title, children }) {
           <FontAwesomeIcon icon={faAngleUp} className="fa-solid" />
         )}
       </h3>
-      {open && <div className="Collapse_p">{children}</div>}
+      {open && <div className="Collapse__p">{children}</div>}
     </div>
   );
 }

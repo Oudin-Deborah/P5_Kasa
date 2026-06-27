@@ -11,8 +11,8 @@ const Rating = ({ rating }) => {
       {[...Array(totalStars)].map((_, index) => (
         <FontAwesomeIcon
           key={index}
-          icon={index < rating ? faStar : faStarEmpty}
-          className="Star__rating"
+          icon={index < rating ? faStar : faStar}
+          className={index < rating ? "Star__Full" : "Star__Empty"}
         />
       ))}
     </div>

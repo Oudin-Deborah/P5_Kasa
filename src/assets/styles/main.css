@@ -76,8 +76,9 @@ footer {
 }
 @media (min-width: 1024px) {
   .Header .Header__Nav {
-    padding-left: 870px;
-    gap: 53px;
+    width: 309px;
+    height: auto;
+    padding-left: 60%;
   }
 }
 @media (max-width: 768px) {
@@ -85,7 +86,7 @@ footer {
     width: 335px;
     height: auto;
     justify-content: center;
-    gap: 26px;
+    gap: 10%;
   }
 }
 
@@ -94,12 +95,15 @@ footer {
   color: black;
   text-decoration: none;
 }
-.nav__link:hover {
-  text-decoration: underline;
+@media (min-width: 1024px) {
+  .nav__link:hover {
+    text-decoration: underline;
+  }
 }
-.nav__link:active {
-  color: black;
-  text-decoration: underline;
+@media (max-width: 768px) {
+  .nav__link {
+    text-decoration: none;
+  }
 }
 
 .header__img-title {
@@ -258,6 +262,7 @@ footer {
 @media (max-width: 768px) {
   .Collapse__section {
     width: 335px;
+    height: auto;
   }
 }
 .Collapse__section .Collapse__h3 {
@@ -270,9 +275,10 @@ footer {
   }
 }
 
-.Collapse_p {
+.Collapse__p {
+  width: 582px;
   margin: 0;
-  padding: 0;
+  padding: 0 0 0 20px;
   color: black;
 }
 
@@ -282,15 +288,27 @@ footer {
   justify-content: center;
   gap: 76px;
 }
+@media (max-width: 768px) {
+  .collapse__Description__Equipements {
+    width: 335px;
+    height: auto;
+    flex-direction: column;
+    gap: 2%;
+    padding-left: 2%;
+  }
+}
 .collapse__Description__Equipements .Collapse__h3 {
   width: 582px;
   border-radius: 10px;
 }
+@media (max-width: 768px) {
+  .collapse__Description__Equipements .Collapse__h3 {
+    width: 335px;
+    height: 30px;
+  }
+}
 .collapse__Description__Equipements .fa-solid {
   right: 10px;
-}
-.collapse__Description__Equipements .Collapse_p {
-  width: 582px;
 }
 
 .buttons__rating {
@@ -301,10 +319,24 @@ footer {
   height: 25px;
   gap: 600px;
 }
+@media (max-width: 768px) {
+  .buttons__rating {
+    gap: 5px;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
 
 .buttons {
   display: flex;
   gap: 5px;
+}
+
+@media (max-width: 768px) {
+  .Housing__info {
+    width: 335px;
+    height: auto;
+  }
 }
 
 .Housing__button {
@@ -319,6 +351,14 @@ footer {
   border: none;
   font-size: 14px;
   font-weight: 700;
+}
+@media (max-width: 768px) {
+  .Housing__button {
+    width: auto;
+    height: 18px;
+    flex-wrap: nowrap;
+    border-radius: 5px;
+  }
 }
 
 .Housing__Img__Slider {
@@ -348,6 +388,11 @@ footer {
   justify-content: space-between;
   margin: 0 100px 0 100px;
 }
+@media (max-width: 768px) {
+  .Title__Host {
+    margin: 0;
+  }
+}
 
 .Host__img {
   background-color: #c4c4c4;
@@ -365,26 +410,31 @@ footer {
 
 .Arrow {
   display: flex;
-  width: 46px;
-  height: 79px;
   background: none;
   border: none;
   align-items: center;
   color: white;
   position: absolute;
+  top: 50%;
 }
 
 .fa-angle-left, .fa-angle-right {
-  width: auto;
+  width: 46px;
   height: 79px;
+}
+@media (max-width: 768px) {
+  .fa-angle-left, .fa-angle-right {
+    width: 12px;
+    height: 19px;
+  }
 }
 
 .Slider__Previous {
-  left: 120px;
+  left: 8%;
 }
 
 .Slider__Next {
-  right: 120px;
+  right: 8%;
 }
 
 .Pictures__Counter {
@@ -402,6 +452,13 @@ footer {
   font-size: 36px;
   font-weight: 500;
 }
+@media (max-width: 768px) {
+  .Housing__Name {
+    font-size: 18px;
+    width: 335px;
+    height: auto;
+  }
+}
 
 .Housing__Location {
   color: black;
@@ -414,10 +471,26 @@ footer {
   display: flex;
   justify-content: flex-end;
 }
+@media (max-width: 768px) {
+  .rating {
+    width: 98px;
+    height: 18px;
+  }
+}
 
-.fa-star {
+.Star__Full, .Star__Empty {
   width: 36px;
   height: 36px;
+}
+@media (max-width: 768px) {
+  .Star__Full, .Star__Empty {
+    width: auto;
+    height: 18px;
+  }
+}
+
+.Star__Empty {
+  color: #E3E3E3;
 }
 
 .page__error {
