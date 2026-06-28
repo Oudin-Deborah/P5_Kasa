@@ -32,32 +32,24 @@ export default function Housing() {
   if (!data) return <ErrorPage />;
 
   return (
-    <div>
+    <div className="Housing__Page">
       <Header />
       <main className="Housing__Main">
         <Slider pictures={data.pictures} />
-        <div className="Title__Host">
-          <div className="Housing__info">
-            <h2 className="Housing__Name">{data.title}</h2>
-            <p className="Housing__Location">{data.location}</p>
-          </div>
-          <div className="Host">
-            <p className="Host__Name">{data.host.name}</p>
-
-            <img className="Host__img"></img>
-          </div>
+        <h2 className="Housing__Name">{data.title}</h2>
+        <p className="Housing__Location">{data.location}</p>
+        <div className="Host">
+          <p className="Host__Name">{data.host.name}</p>
+          <img className="Host__img"></img>
         </div>{" "}
-        <div className="buttons__rating">
-          <div className="buttons">
-            {data.tags.map((tag) => (
-              <button className="Housing__button" key={tag}>
-                {tag}
-              </button>
-            ))}
-          </div>
-
-          <Rating rating={data.rating} />
+        <div className="buttons">
+          {data.tags.map((tag) => (
+            <button className="Housing__button" key={tag}>
+              {tag}
+            </button>
+          ))}
         </div>
+        <Rating rating={data.rating} />
         <div className="collapse__Description__Equipements">
           <Collapse className="Description" title="Description">
             <p>{data.description}</p>
