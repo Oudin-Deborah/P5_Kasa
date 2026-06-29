@@ -26,10 +26,6 @@ footer {
   display: flex;
   justify-content: center;
 }
-footer {
-  width: auto;
-  height: 209px;
-}
 
 .Footer__Img {
   display: block;
@@ -61,7 +57,6 @@ footer {
   .Header__Logo {
     width: 145px;
     height: 46px;
-    padding-left: 5%;
   }
 }
 
@@ -227,6 +222,32 @@ footer {
   flex-direction: column;
 }
 
+.collapse__Description__Equipements .Collapse__h3, .Collapse__section .Collapse__h3 {
+  position: relative;
+  display: flex;
+  align-items: center;
+  height: 52px;
+  background-color: #FF6060;
+  color: white;
+  font-size: 24px;
+  border-radius: 5px;
+  padding: 10px 20px 10px 15px;
+}
+@media (max-width: 768px) {
+  .collapse__Description__Equipements .Collapse__h3, .Collapse__section .Collapse__h3 {
+    width: 335px;
+    height: 30px;
+  }
+}
+.collapse__Description__Equipements .Collapse__h3 .fa-solid, .Collapse__section .Collapse__h3 .fa-solid {
+  position: absolute;
+  right: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 32px;
+  height: 32px;
+}
+
 .Collapse__section {
   display: flex;
   align-content: center;
@@ -244,31 +265,11 @@ footer {
     height: auto;
   }
 }
-
 .Collapse__section .Collapse__h3 {
   width: 1023px;
-  height: 52px;
-  display: flex;
-}
-.Collapse__section .Collapse__p {
-  width: 1023px;
-  height: auto;
-}
-
-.Collapse__h3 {
-  display: flex;
-  align-items: center;
-  background-color: #FF6060;
-  color: white;
-  font-size: 24px;
-  border-radius: 5px;
-  padding: 10px 20px 10px 15px;
-  position: relative;
-  height: auto;
-  border-radius: 10px;
 }
 @media (max-width: 768px) {
-  .Collapse__h3 {
+  .Collapse__section .Collapse__h3 {
     width: 335px;
     height: 30px;
   }
@@ -276,7 +277,6 @@ footer {
 
 .Collapse__p {
   width: 582px;
-  height: auto;
   margin: 0;
   padding: 0 0 0 20px;
   color: black;
@@ -284,25 +284,22 @@ footer {
 
 .collapse__Description__Equipements {
   display: flex;
-  justify-content: space-around;
-  width: auto;
-  height: 52px;
-  margin-top: 20%;
+  justify-items: start;
+  justify-content: center;
+  gap: 76px;
 }
 @media (max-width: 768px) {
   .collapse__Description__Equipements {
-    display: grid;
-    grid-template-columns: 1, 1fr;
-    padding-top: 20%;
-    align-items: center;
-    justify-content: center;
+    width: 335px;
+    height: auto;
+    flex-direction: column;
+    gap: 2%;
+    padding-left: 2%;
   }
 }
-
 .collapse__Description__Equipements .Collapse__h3 {
   width: 582px;
-  height: 52px;
-  background-color: #FF6060;
+  border-radius: 10px;
 }
 @media (max-width: 768px) {
   .collapse__Description__Equipements .Collapse__h3 {
@@ -310,75 +307,36 @@ footer {
     height: 30px;
   }
 }
-.collapse__Description__Equipements .Collapse__p {
-  width: 582px;
-  height: auto;
+.collapse__Description__Equipements .fa-solid {
+  right: 10px;
+}
+
+.buttons__rating {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: auto;
+  height: 25px;
+  gap: 600px;
 }
 @media (max-width: 768px) {
-  .collapse__Description__Equipements .Collapse__p {
-    width: 335px;
-    height: auto;
-  }
-}
-
-.fa-solid {
-  position: absolute;
-  right: 20px;
-  top: 50%;
-  transform: translateY(-50%);
-  width: 32px;
-  height: 32px;
-}
-
-.Housing__Name, .Housing__Location, .buttons {
-  position: absolute;
-  left: 7%;
-}
-
-.Housing__Page, .Housing__Main {
-  display: block;
-  gap: 50px;
-}
-
-@media (max-width: 768px) {
-  .Housing__Page {
-    display: flex;
+  .buttons__rating {
+    gap: 5px;
     flex-direction: column;
-  }
-}
-
-.Housing__Main {
-  position: relative;
-  width: auto;
-  height: 1065px;
-}
-@media (max-width: 768px) {
-  .Housing__Main {
-    position: absolute;
-    width: 375px;
-    height: auto;
-  }
-}
-
-.Housing__Name {
-  width: auto;
-  height: 650px;
-  font-size: 36px;
-  font-weight: 500;
-}
-@media (max-width: 768px) {
-  .Housing__Name {
-    font-size: 18px;
-    width: 335px;
-    height: auto;
+    align-items: flex-start;
   }
 }
 
 .buttons {
   display: flex;
-  left: 7%;
-  bottom: 40%;
   gap: 5px;
+}
+
+@media (max-width: 768px) {
+  .Housing__info {
+    width: 335px;
+    height: auto;
+  }
 }
 
 .Housing__button {
@@ -412,19 +370,8 @@ footer {
 }
 
 .Host {
-  position: absolute;
-  right: 5%;
   display: flex;
   align-items: center;
-}
-@media (max-width: 768px) {
-  .Host {
-    position: absolute;
-    width: 135px;
-    height: 33px;
-    right: 2%;
-    bottom: 50%;
-  }
 }
 
 .Host__Name {
@@ -433,6 +380,18 @@ footer {
   height: 52px;
   justify-content: flex-end;
   align-items: center;
+}
+
+.Title__Host {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 0 100px 0 100px;
+}
+@media (max-width: 768px) {
+  .Title__Host {
+    margin: 0;
+  }
 }
 
 .Host__img {
@@ -486,11 +445,22 @@ footer {
   width: 24px;
   height: 32px;
   color: white;
-  top: 85%;
+  padding-top: 357px;
+}
+
+.Housing__Name {
+  font-size: 36px;
+  font-weight: 500;
+}
+@media (max-width: 768px) {
+  .Housing__Name {
+    font-size: 18px;
+    width: 335px;
+    height: auto;
+  }
 }
 
 .Housing__Location {
-  bottom: 43%;
   color: black;
   font-size: 18px;
   width: auto;
@@ -498,9 +468,8 @@ footer {
 }
 
 .rating {
-  position: absolute;
-  bottom: 40%;
-  right: 5%;
+  display: flex;
+  justify-content: flex-end;
 }
 @media (max-width: 768px) {
   .rating {

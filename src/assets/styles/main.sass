@@ -23,6 +23,7 @@ html, body, h1
   width: auto
   height: auto
 
+
 html
   padding-top: 45px
   @include down(mobile)
@@ -31,17 +32,16 @@ html
 p, nav
   font-weight: 500
 
+
 footer
   display: flex
   justify-content: center
-  @include down(mobile)
-  width: auto
-  height: 209px
 
 .Footer__Img
   display: block
   @include down(desktop)
     display: none
+
 .Footer__Mobile
   display: none
   @include down(mobile)
@@ -56,7 +56,6 @@ footer
   @include down(mobile)
     width: 145px
     height: 46px
-    padding-left: 5%
   
 .Header
   box-sizing: border-box
@@ -77,6 +76,8 @@ footer
       height: auto
       justify-content: center
       gap: 10%
+
+
 
 .nav__link
   list-style: none
@@ -129,7 +130,7 @@ footer
     font-style: bold
     left: 36px
 
-//Index
+  //index
 .Index__Main
   display: flex
   justify-content: center
@@ -187,6 +188,30 @@ footer
   align-items: center
   flex-direction: column
 
+
+//Collapse
+%CollapseTitle
+  position: relative
+  display: flex
+  align-items: center
+  height: 52px
+  background-color: #FF6060
+  color: white
+  font-size: 24px
+  border-radius: 5px
+  padding: 10px 20px 10px 15px
+  @include down(mobile)
+    width: 335px
+    height: 30px
+
+  .fa-solid
+    position: absolute
+    right: 20px
+    top: 50%
+    transform: translateY(-50%)
+    width: 32px
+    height: 32px
+
 .Collapse__section
   display: flex
   align-content: center
@@ -201,118 +226,67 @@ footer
     width: 335px
     height: auto
 
-.Collapse__section
-  .Collapse__h3
-    width: 1023px
-    height: 52px
-    display: flex
-  .Collapse__p
-    width: 1023px
-    height: auto
 
-//Collapse
-//gère tout les collapses (About/housing)
-.Collapse__h3
-  display: flex
-  align-items: center
-  background-color: #FF6060
-  color: white
-  font-size: 24px
-  border-radius: 5px
-  padding: 10px 20px 10px 15px
-  position: relative
-  height: auto
-  border-radius: 10px
-  @include down(mobile)
-    width: 335px
-    height: 30px
+  .Collapse__h3
+    @extend %CollapseTitle
+    width: 1023px
+    @include down(mobile)
+      width: 335px
+      height:30px
+
 
 .Collapse__p
   width: 582px
-  height: auto
   margin: 0
   padding: 0 0 0 20px 
   color: black
 
-//collapse Housing
 .collapse__Description__Equipements
   display: flex
-  justify-content: space-around
-  width: auto
-  height: 52px
-  margin-top: 20%
+  justify-items: start
+  justify-content: center
+  gap: 76px
   @include down(mobile)
-    display: grid
-    grid-template-columns: (1, 1fr)
-    padding-top: 20% 
-    align-items: center
-    justify-content: center
+    width: 335px
+    height: auto
+    flex-direction: column
+    gap: 2%
+    padding-left: 2%
+  
 
-
-.collapse__Description__Equipements
   .Collapse__h3
+    @extend %CollapseTitle
     width: 582px
-    height: 52px
-    background-color: #FF6060
+    border-radius: 10px
     @include down(mobile)
       width: 335px
       height: 30px
-      
-  .Collapse__p
-    width: 582px
-    height: auto
-    @include down(mobile)
-      width: 335px
-      height: auto
-    
-//Position de la fleche sur le collapse
 
-.fa-solid
-    position: absolute
-    right: 20px
-    top: 50%
-    transform: translateY(-50%)
-    width: 32px
-    height: 32px
+  .fa-solid
+    right: 10px
 
 //Housing
-.Housing__Name, .Housing__Location,.buttons
-  position: absolute
-  left: 7%
-
-.Housing__Page, .Housing__Main
-  display: block
-  gap: 50px
-
-.Housing__Page
+.buttons__rating
+  display: flex
+  justify-content: space-around
+  align-items: center
+  width: auto
+  height: 25px
+  gap: 600px
   @include down(mobile)
-    display: flex
+    gap:5px
     flex-direction: column
-
-.Housing__Main
-  position: relative
-  width: auto
-  height: 1065px
-  @include down(mobile)
-    position: absolute
-    width: 375px
-    height: auto
-
-.Housing__Name
-  width: auto
-  height: 650px
-  font-size: 36px
-  font-weight: 500
-  @include down(mobile)
-    font-size: 18px
-    width: 335px
-    height: auto
+    align-items: flex-start
 
 .buttons
   display: flex
-  left: 7%
-  bottom:40%
   gap: 5px
+
+
+.Housing__info
+  @include down(mobile)
+    width: 335px
+    height: auto
 
 .Housing__button
   display: flex
@@ -332,7 +306,6 @@ footer
     flex-wrap: nowrap
     border-radius: 5px
 
-
 .Housing__Img__Slider
   display: flex
   justify-content: center
@@ -341,16 +314,8 @@ footer
   position: relative
 
 .Host
-  position: absolute
-  right: 5%
   display: flex
   align-items: center
-  @include down(mobile)
-    position: absolute
-    width: 135px
-    height: 33px
-    right: 2%
-    bottom: 50%
 
 .Host__Name
   display: flex
@@ -359,7 +324,13 @@ footer
   justify-content: flex-end
   align-items: center
 
-
+.Title__Host
+  display: flex
+  align-items: center
+  justify-content: space-between
+  margin: 0 100px 0 100px
+  @include down(mobile)
+    margin: 0
 
 .Host__img
   background-color: #c4c4c4
@@ -404,21 +375,26 @@ footer
   width: 24px
   height: 32px
   color: white
-  top: 85%
+  padding-top: 357px
 
+.Housing__Name
+  font-size: 36px
+  font-weight: 500
+  @include down(mobile)
+    font-size: 18px
+    width: 335px
+    height: auto
 
 
 .Housing__Location
-  bottom: 43%
   color: black
   font-size: 18px
   width: auto
   height: 26px
 
 .rating
-  position: absolute
-  bottom: 40%
-  right:5%
+  display: flex
+  justify-content: flex-end
   @include down(mobile)
     width: 98px
     height: 18px
