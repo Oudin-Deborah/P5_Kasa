@@ -330,6 +330,7 @@ footer {
 .buttons {
   display: flex;
   gap: 5px;
+  padding-left: 6%;
 }
 
 @media (max-width: 768px) {
@@ -465,11 +466,13 @@ footer {
   font-size: 18px;
   width: auto;
   height: 26px;
+  padding-left: 6%;
 }
 
 .rating {
   display: flex;
   justify-content: flex-end;
+  padding-right: 5%;
 }
 @media (max-width: 768px) {
   .rating {
@@ -487,6 +490,10 @@ footer {
     width: auto;
     height: 18px;
   }
+}
+
+.Star__Full {
+  color: #FF6060;
 }
 
 .Star__Empty {
