@@ -30,25 +30,26 @@ const data = [
 
 const About = () => {
   return (
-    <div className="header">
-      <Header />
-      <div className="header__img-title">
-        <img
-          src={PaysageMontagnard}
-          alt="Paysage Montagnard"
-          className="About__Header__img"
-          
-        />
+    <section className="About__Page">
+      <div className="header">
+        <Header />
+        <div className="header__img-title">
+          <img
+            src={PaysageMontagnard}
+            alt="Paysage Montagnard"
+            className="About__Header__img"
+          />
+        </div>
+        <main className="Collapse__section">
+          {data.map((data, index) => (
+            <Collapse key={index} title={data.title}>
+              <p>{data.description}</p>
+            </Collapse>
+          ))}
+        </main>
+        <Footer />
       </div>
-<main className="Collapse__section">
-  {data.map((data, index) => (
-    <Collapse key={index} title={data.title}>
-      <p>{data.description}</p>
-    </Collapse>
-  ))}
-</main>
-      <Footer />
-    </div>
+    </section>
   );
 };
 export default About;

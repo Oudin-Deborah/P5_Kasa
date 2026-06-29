@@ -26,6 +26,10 @@ footer {
   display: flex;
   justify-content: center;
 }
+footer {
+  width: auto;
+  height: 209px;
+}
 
 .Footer__Img {
   display: block;
@@ -57,6 +61,7 @@ footer {
   .Header__Logo {
     width: 145px;
     height: 46px;
+    padding-left: 5%;
   }
 }
 
@@ -222,32 +227,6 @@ footer {
   flex-direction: column;
 }
 
-.Collapse__h3 {
-  display: flex;
-  align-items: center;
-  width: 1023px;
-  height: 52px;
-  background-color: #FF6060;
-  color: white;
-  font-size: 24px;
-  border-radius: 5px;
-  padding: 10px 20px 10px 15px;
-}
-@media (max-width: 768px) {
-  .Collapse__h3 {
-    width: 335px;
-    height: 30px;
-  }
-}
-.Collapse__h3 .fa-solid {
-  position: absolute;
-  right: 20px;
-  top: 50%;
-  transform: translateY(-50%);
-  width: 32px;
-  height: 32px;
-}
-
 .Collapse__section {
   display: flex;
   align-content: center;
@@ -266,6 +245,35 @@ footer {
   }
 }
 
+.Collapse__section .Collapse__h3 {
+  width: 1023px;
+  height: 52px;
+  display: flex;
+}
+.Collapse__section .Collapse__p {
+  width: 1023px;
+  height: auto;
+}
+
+.Collapse__h3 {
+  display: flex;
+  align-items: center;
+  background-color: #FF6060;
+  color: white;
+  font-size: 24px;
+  border-radius: 5px;
+  padding: 10px 20px 10px 15px;
+  position: relative;
+  height: auto;
+  border-radius: 10px;
+}
+@media (max-width: 768px) {
+  .Collapse__h3 {
+    width: 335px;
+    height: 30px;
+  }
+}
+
 .Collapse__p {
   width: 582px;
   height: auto;
@@ -276,34 +284,50 @@ footer {
 
 .collapse__Description__Equipements {
   display: flex;
-  justify-items: start;
   justify-content: space-around;
+  width: auto;
+  height: 52px;
+  margin-top: 20%;
 }
 @media (max-width: 768px) {
   .collapse__Description__Equipements {
-    width: 335px;
-    height: auto;
-    flex-direction: column;
-    gap: 2%;
-    padding-left: 2%;
+    display: grid;
+    grid-template-columns: 1, 1fr;
+    padding-top: 20%;
+    align-items: center;
+    justify-content: center;
   }
 }
-.collapse__Description__Equipements .Description {
-  position: absolute;
-  bottom: 50%;
-}
 
-.Collapse__h3 {
-  position: relative;
+.collapse__Description__Equipements .Collapse__h3 {
   width: 582px;
-  height: auto;
-  border-radius: 10px;
+  height: 52px;
+  background-color: #FF6060;
 }
 @media (max-width: 768px) {
-  .Collapse__h3 {
+  .collapse__Description__Equipements .Collapse__h3 {
     width: 335px;
     height: 30px;
   }
+}
+.collapse__Description__Equipements .Collapse__p {
+  width: 582px;
+  height: auto;
+}
+@media (max-width: 768px) {
+  .collapse__Description__Equipements .Collapse__p {
+    width: 335px;
+    height: auto;
+  }
+}
+
+.fa-solid {
+  position: absolute;
+  right: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 32px;
+  height: 32px;
 }
 
 .Housing__Name, .Housing__Location, .buttons {
@@ -316,21 +340,44 @@ footer {
   gap: 50px;
 }
 
+@media (max-width: 768px) {
+  .Housing__Page {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
 .Housing__Main {
   position: relative;
   width: auto;
   height: 1065px;
 }
+@media (max-width: 768px) {
+  .Housing__Main {
+    position: absolute;
+    width: 375px;
+    height: auto;
+  }
+}
 
 .Housing__Name {
   width: auto;
   height: 650px;
+  font-size: 36px;
+  font-weight: 500;
+}
+@media (max-width: 768px) {
+  .Housing__Name {
+    font-size: 18px;
+    width: 335px;
+    height: auto;
+  }
 }
 
 .buttons {
   display: flex;
   left: 7%;
-  bottom: 50%;
+  bottom: 40%;
   gap: 5px;
 }
 
@@ -375,6 +422,8 @@ footer {
     position: absolute;
     width: 135px;
     height: 33px;
+    right: 2%;
+    bottom: 50%;
   }
 }
 
@@ -437,23 +486,11 @@ footer {
   width: 24px;
   height: 32px;
   color: white;
-  padding-top: 357px;
-}
-
-.Housing__Name {
-  font-size: 36px;
-  font-weight: 500;
-}
-@media (max-width: 768px) {
-  .Housing__Name {
-    font-size: 18px;
-    width: 335px;
-    height: auto;
-  }
+  top: 85%;
 }
 
 .Housing__Location {
-  bottom: 50%;
+  bottom: 43%;
   color: black;
   font-size: 18px;
   width: auto;
@@ -462,6 +499,7 @@ footer {
 
 .rating {
   position: absolute;
+  bottom: 40%;
   right: 5%;
 }
 @media (max-width: 768px) {
