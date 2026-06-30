@@ -2,7 +2,6 @@
 @import "https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap"
 
 $breakpoints: (mobile: 768px,desktop: 1024px)
-
 @mixin up($key)
   $size: map.get($breakpoints, $key)
   @media (min-width: $size)
@@ -240,6 +239,11 @@ footer
   margin: 0
   padding: 0 0 0 20px 
   color: black
+  @include down(mobile)
+    width: 375px
+    height: auto
+    padding: 0
+
 
 .collapse__Description__Equipements
   display: flex
@@ -266,28 +270,38 @@ footer
     right: 10px
 
 //Housing
-.buttons__rating
-  display: flex
-  justify-content: space-around
-  align-items: center
-  width: auto
-  height: 25px
-  gap: 600px
-  @include down(mobile)
-    gap:5px
-    flex-direction: column
-    align-items: flex-start
-
-.buttons
-  display: flex
-  gap: 5px
-  padding-left: 6%
-
-
-.Housing__info
-  @include down(mobile)
-    width: 335px
+@include up(desktop)
+  .Housing__Info
+    width: 100%
     height: auto
+    display: grid
+    padding-left: 7%
+    grid-template-columns: 3fr 1fr
+    grid-template-areas: "Title Host" "Location Location" "Buttons Rating" 
+
+  .Housing__Name
+    grid-area: Title
+
+  .Host
+    grid-area: Host
+    display: flex
+    flex-direction: row
+    align-items: center
+
+  .Housing__Location
+    grid-area: Location
+    color: black
+    font-size: 18px
+    width: auto
+    height: 26px
+  
+  .buttons
+   grid-area: Buttons
+   display: flex
+   gap: 5px
+
+  .rating
+    grid-area: Rating
 
 .Housing__button
   display: flex
@@ -314,24 +328,12 @@ footer
   padding-top: 53px
   position: relative
 
-.Host
-  display: flex
-  align-items: center
-
 .Host__Name
   display: flex
   width: 70px
   height: 52px
   justify-content: flex-end
   align-items: center
-
-.Title__Host
-  display: flex
-  align-items: center
-  justify-content: space-between
-  margin: 0 100px 0 100px
-  @include down(mobile)
-    margin: 0
 
 .Host__img
   background-color: #c4c4c4
@@ -385,22 +387,7 @@ footer
     font-size: 18px
     width: 335px
     height: auto
-
-
-.Housing__Location
-  color: black
-  font-size: 18px
-  width: auto
-  height: 26px
-  padding-left: 6%
-
-.rating
-  display: flex
-  justify-content: flex-end
-  padding-right: 5%
-  @include down(mobile)
-    width: 98px
-    height: 18px
+    padding-left: 2%
 
 .Star__Full, .Star__Empty
   width: 36px
@@ -414,7 +401,45 @@ footer
     
 .Star__Empty
   color: #E3E3E3
-  
+
+@include down(mobile)
+  .Housing__Info
+    display: grid
+    padding-left: 2%
+    gap: 27px
+    grid-template-columns: 4r 1fr
+    grid-template-areas: "Title Title" "Location Location" "Tags Tags" "Rating Host"
+
+  .Housing__Name
+    grid-area: Title
+    font-size: 18px
+    margin: 0
+    padding-top: 2%
+
+  .Housing__Location
+    grid-area: Location
+    color: black
+    font-size: 14px
+
+  .buttons
+    grid-area: Tags
+    display: flex
+    gap: 5px
+
+  .rating
+    grid-area: Rating
+    display: flex
+    align-items: center
+  .Host
+    grid-area: Host    
+    display: flex
+    width: auto
+    height: 33px
+    justify-content: flex-end
+    align-items: center
+    padding-left: 0
+    padding-right: 7%
+
 //Error404
 .page__error
   display: flex
