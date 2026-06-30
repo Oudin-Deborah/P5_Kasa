@@ -53,8 +53,9 @@ footer
   width: 210px
   height: auto
   @include down(mobile)
-    width: 145px
+    width: auto
     height: 46px
+    padding-left: 7%
   
 .Header
   box-sizing: border-box
@@ -230,7 +231,7 @@ footer
     @extend %CollapseTitle
     width: 1023px
     @include down(mobile)
-      width: 335px
+      width: auto
       height:30px
 
 
@@ -270,38 +271,8 @@ footer
     right: 10px
 
 //Housing
-@include up(desktop)
-  .Housing__Info
-    width: 100%
-    height: auto
-    display: grid
-    padding-left: 7%
-    grid-template-columns: 3fr 1fr
-    grid-template-areas: "Title Host" "Location Location" "Buttons Rating" 
 
-  .Housing__Name
-    grid-area: Title
 
-  .Host
-    grid-area: Host
-    display: flex
-    flex-direction: row
-    align-items: center
-
-  .Housing__Location
-    grid-area: Location
-    color: black
-    font-size: 18px
-    width: auto
-    height: 26px
-  
-  .buttons
-   grid-area: Buttons
-   display: flex
-   gap: 5px
-
-  .rating
-    grid-area: Rating
 
 .Housing__button
   display: flex
@@ -334,12 +305,19 @@ footer
   height: 52px
   justify-content: flex-end
   align-items: center
+  @include down(mobile)
+    font-size: 12px
+    width: 93px
+    height: 33px
 
 .Host__img
   background-color: #c4c4c4
   width: 64px
   height: 64px
   border-radius: 50%
+  @include down(mobile)
+    width: 32px
+    height: auto
 
 .Housing__Img
   border-radius: 25px
@@ -402,13 +380,44 @@ footer
 .Star__Empty
   color: #E3E3E3
 
+@include up(desktop)
+  .Housing__Info
+    display: grid
+    padding-left: 7%
+    grid-template-columns: 3fr 1fr
+    grid-template-areas: "Title Host" "Location Location" "Buttons Rating" 
+
+  .Housing__Name
+    grid-area: Title
+
+  .Host
+    grid-area: Host
+    display: flex
+    flex-direction: row
+    align-items: center
+
+  .Housing__Location
+    grid-area: Location
+    color: black
+    font-size: 18px
+    width: auto
+    height: 26px
+  
+  .buttons
+   grid-area: Buttons
+   display: flex
+   gap: 5px
+
+  .rating
+    grid-area: Rating
+
 @include down(mobile)
   .Housing__Info
     display: grid
     padding-left: 2%
     gap: 27px
-    grid-template-columns: 4r 1fr
-    grid-template-areas: "Title Title" "Location Location" "Tags Tags" "Rating Host"
+    grid-template-columns: 4fr 1fr
+    grid-template-areas: "Title Title" "Location . " "Tags Tags" "Rating Host"
 
   .Housing__Name
     grid-area: Title
@@ -430,15 +439,13 @@ footer
     grid-area: Rating
     display: flex
     align-items: center
+  
   .Host
     grid-area: Host    
     display: flex
-    width: auto
-    height: 33px
-    justify-content: flex-end
     align-items: center
     padding-left: 0
-    padding-right: 7%
+    padding-right: 20%
 
 //Error404
 .page__error
