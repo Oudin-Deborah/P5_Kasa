@@ -355,6 +355,7 @@ footer {
   height: 52px;
   justify-content: flex-end;
   align-items: center;
+  text-align: right;
 }
 @media (max-width: 768px) {
   .Host__Name {
@@ -373,7 +374,7 @@ footer {
 @media (max-width: 768px) {
   .Host__img {
     width: 32px;
-    height: auto;
+    height: 32px;
   }
 }
 
@@ -471,6 +472,7 @@ footer {
     display: flex;
     flex-direction: row;
     align-items: center;
+    justify-content: center;
   }
   .Housing__Location {
     grid-area: Location;
@@ -494,7 +496,7 @@ footer {
     padding-left: 2%;
     gap: 27px;
     grid-template-columns: 4fr 1fr;
-    grid-template-areas: "Title Title" "Location . " "Tags Tags" "Rating Host";
+    grid-template-areas: "Title Title" "Location Location" "Tags Tags" "Rating Host";
   }
   .Housing__Name {
     grid-area: Title;
@@ -521,8 +523,8 @@ footer {
     grid-area: Host;
     display: flex;
     align-items: center;
-    padding-left: 0;
-    padding-right: 20%;
+    padding-right: 10%;
+    gap: 2%;
   }
 }
 .page__error {
