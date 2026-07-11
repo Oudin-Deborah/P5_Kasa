@@ -37,11 +37,11 @@ export default function Housing() {
       <main className="Housing__Main">
         <Slider pictures={data.pictures} />
         <section className="Housing__Info">
-            <h2 className="Housing__Name">{data.title}</h2>
-            <div className="Host">
-              <p className="Host__Name">{data.host.name}</p>
-              <img className="Host__img"></img>
-            </div>{" "}
+          <h2 className="Housing__Name">{data.title}</h2>
+          <div className="Host">
+            <p className="Host__Name">{data.host.name}</p>
+            <img className="Host__img"></img>
+          </div>{" "}
           <p className="Housing__Location">{data.location}</p>
           <div className="buttons">
             {data.tags.map((tag) => (
